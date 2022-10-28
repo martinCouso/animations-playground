@@ -40,6 +40,7 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 import Home from '../home/home';
 import PanGestureHandlerBasics from '../pan-gesture-handler-basics/PanGestureHandlerBasics';
 import InterpolateScrollView from '../interpolate-scroll-view/InterpolateScrollView';
+import ColorInterpolationBasic from '../color-interpolation/ColoInterpolation';
 
 const Drawer = createDrawerNavigator();
 
@@ -76,6 +77,16 @@ const App = () => {
         <Drawer.Navigator initialRouteName="Home">
           <Drawer.Screen name="Home" component={Home} />
           <Drawer.Screen name="PGHBasics" component={PanGestureHandlerBasics} />
+          <Drawer.Screen
+            name="ColorInterpolationBasic"
+            component={ColorInterpolationBasic}
+            options={{
+              headerStyle: {
+                backgroundColor: 'transparent',
+              },
+              headerShown: false,
+            }}
+          />
           <Drawer.Screen
             name="InterpolateScrollView"
             component={InterpolateScrollView}
