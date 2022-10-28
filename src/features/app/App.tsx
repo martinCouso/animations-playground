@@ -39,6 +39,7 @@ import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import Home from '../home/home';
 import PanGestureHandlerBasics from '../pan-gesture-handler-basics/PanGestureHandlerBasics';
+import InterpolateScrollView from '../interpolate-scroll-view/InterpolateScrollView';
 
 const Drawer = createDrawerNavigator();
 
@@ -75,6 +76,19 @@ const App = () => {
         <Drawer.Navigator initialRouteName="Home">
           <Drawer.Screen name="Home" component={Home} />
           <Drawer.Screen name="PGHBasics" component={PanGestureHandlerBasics} />
+          <Drawer.Screen
+            name="InterpolateScrollView"
+            component={InterpolateScrollView}
+            options={{
+              headerStyle: {
+                backgroundColor: 'black',
+              },
+              headerTintColor: '#fff',
+              headerTitleStyle: {
+                fontWeight: 'bold',
+              },
+            }}
+          />
         </Drawer.Navigator>
       </NavigationContainer>
     </GestureHandlerRootView>
