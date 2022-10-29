@@ -6,6 +6,7 @@ import Styles, {
   Themes,
 } from './styles/ColorInterpolationBasicStyles';
 import Animated, {
+  interpolate,
   interpolateColor,
   useAnimatedStyle,
   useDerivedValue,
@@ -44,7 +45,7 @@ const ColorInterpolationBasic: React.FC = () => {
       [0, 1],
       [Themes.light.primaryColor, Themes.dark.primaryColor],
     );
-    const perspective = interpolateColor(progress.value, [0, 1], [50, 150]);
+    const perspective = interpolate(progress.value, [0, 1], [50, 150]);
     return {
       backgroundColor,
       transform: [{perspective: perspective}, {rotateX: '45deg'}],
