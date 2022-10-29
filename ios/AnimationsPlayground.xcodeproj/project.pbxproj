@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* AnimationsPlaygroundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AnimationsPlaygroundTests.m */; };
+		1258A487AC5C4D87A6585A37 /* FutureSpace.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 886E5AB59F0749E3A67F867C /* FutureSpace.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		586578B1BA4A7068FBB90087 /* libPods-AnimationsPlayground.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 779C0BCBE8D256E3F61E1194 /* libPods-AnimationsPlayground.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		C7EFA01C98B4003037556B86 /* libPods-AnimationsPlayground-AnimationsPlaygroundTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4B671B5916560C3D7C4DDE /* libPods-AnimationsPlayground-AnimationsPlaygroundTests.a */; };
-		1258A487AC5C4D87A6585A37 /* FutureSpace.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 886E5AB59F0749E3A67F867C /* FutureSpace.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,12 +40,12 @@
 		243D9F0A388B85C3989E1E45 /* Pods-AnimationsPlayground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationsPlayground.release.xcconfig"; path = "Target Support Files/Pods-AnimationsPlayground/Pods-AnimationsPlayground.release.xcconfig"; sourceTree = "<group>"; };
 		779C0BCBE8D256E3F61E1194 /* libPods-AnimationsPlayground.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnimationsPlayground.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = AnimationsPlayground/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		886E5AB59F0749E3A67F867C /* FutureSpace.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = FutureSpace.ttf; path = ../src/assets/fonts/FutureSpace.ttf; sourceTree = "<group>"; };
 		BC1FAEEE24EE1F0B2AB510AF /* Pods-AnimationsPlayground-AnimationsPlaygroundTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationsPlayground-AnimationsPlaygroundTests.debug.xcconfig"; path = "Target Support Files/Pods-AnimationsPlayground-AnimationsPlaygroundTests/Pods-AnimationsPlayground-AnimationsPlaygroundTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E99FF3238AD6F6EA97D5094C /* Pods-AnimationsPlayground-AnimationsPlaygroundTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationsPlayground-AnimationsPlaygroundTests.release.xcconfig"; path = "Target Support Files/Pods-AnimationsPlayground-AnimationsPlaygroundTests/Pods-AnimationsPlayground-AnimationsPlaygroundTests.release.xcconfig"; sourceTree = "<group>"; };
 		EA4B671B5916560C3D7C4DDE /* libPods-AnimationsPlayground-AnimationsPlaygroundTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnimationsPlayground-AnimationsPlaygroundTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F6238A0A355DCBD8ED7AA088 /* Pods-AnimationsPlayground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationsPlayground.debug.xcconfig"; path = "Target Support Files/Pods-AnimationsPlayground/Pods-AnimationsPlayground.debug.xcconfig"; sourceTree = "<group>"; };
-		886E5AB59F0749E3A67F867C /* FutureSpace.ttf */ = {isa = PBXFileReference; name = "FutureSpace.ttf"; path = "../src/assets/fonts/FutureSpace.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,13 +152,13 @@
 			sourceTree = "<group>";
 		};
 		C59DE2B5EA254658A2F1D9EF /* Resources */ = {
-			isa = "PBXGroup";
+			isa = PBXGroup;
 			children = (
 				886E5AB59F0749E3A67F867C /* FutureSpace.ttf */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
 			path = "";
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
