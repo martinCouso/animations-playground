@@ -18,6 +18,7 @@ import PanGestureHandlerBasics from '../pan-gesture-handler-basics/PanGestureHan
 import InterpolateScrollView from '../interpolate-scroll-view/InterpolateScrollView';
 import ColorInterpolationBasic from '../color-interpolation/ColoInterpolation';
 import SkiaHoloCards from '../skia-holo-cards/SkiaHoloCards';
+import PanGestureSkiaBasics from '../PanGestureSkiaBasics/PanGestureSkiaBasics';
 
 const Drawer = createDrawerNavigator();
 
@@ -38,6 +39,17 @@ const App = () => {
               headerShown: false,
             }}
           />
+          <Drawer.Screen
+            name="PanGestureSkiaBasics"
+            component={PanGestureSkiaBasics}
+            options={{
+              headerStyle: {
+                backgroundColor: 'transparent',
+              },
+              headerShown: false,
+            }}
+          />
+
           <Drawer.Screen
             name="InterpolateScrollView"
             component={InterpolateScrollView}
