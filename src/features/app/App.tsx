@@ -19,6 +19,7 @@ import InterpolateScrollView from '../interpolate-scroll-view/InterpolateScrollV
 import ColorInterpolationBasic from '../color-interpolation/ColoInterpolation';
 import SkiaHoloCards from '../skia-holo-cards/SkiaHoloCards';
 import PanGestureSkiaBasics from '../PanGestureSkiaBasics/PanGestureSkiaBasics';
+import GridSkia from '../grid-skia/GridSkia';
 
 const Drawer = createDrawerNavigator();
 
@@ -32,6 +33,16 @@ const App = () => {
           <Drawer.Screen
             name="ColorInterpolationBasic"
             component={ColorInterpolationBasic}
+            options={{
+              headerStyle: {
+                backgroundColor: 'transparent',
+              },
+              headerShown: false,
+            }}
+          />
+          <Drawer.Screen
+            name="GridSkia"
+            component={GridSkia}
             options={{
               headerStyle: {
                 backgroundColor: 'transparent',
