@@ -1,11 +1,11 @@
 import {Dimensions, StyleSheet} from 'react-native';
 const {width, height} = Dimensions.get('window');
 
-export const ITEMS_HORIZONTAL = 6;
+export const ITEMS_HORIZONTAL = 5;
 export const ITEM_CONTAINER_SIZE = width / ITEMS_HORIZONTAL;
-export const ITEM_CONTAINER_PADDING = 20;
+export const ITEM_CONTAINER_PADDING = 0;
 export const ITEM_SIZE = ITEM_CONTAINER_SIZE - ITEM_CONTAINER_PADDING;
-export const ITEMS_VERTICAL = 6;
+export const ITEMS_VERTICAL = 5;
 export const CANVAS_HEIGHT = ITEMS_VERTICAL * ITEM_CONTAINER_SIZE;
 export const CANVAS_WIDTH = width;
 export const MAX_DISTANCE_BETWEEN_ITEMS =
@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
   canvasContainer: {
     height: CANVAS_HEIGHT,
     width: CANVAS_WIDTH,
+    backgroundColor: 'black',
   },
 });
 

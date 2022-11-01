@@ -12,6 +12,7 @@ import {
 } from '@shopify/react-native-skia';
 import Styles, {
   CANVAS_HEIGHT,
+  CANVAS_WIDTH,
   ITEM_CONTAINER_PADDING,
   ITEM_CONTAINER_SIZE,
   ITEM_SIZE,
@@ -21,9 +22,10 @@ import Styles, {
 import {CARD_WIDTH} from '../PanGestureSkiaBasics/styles/PanGestureSkiaBasicsStyles';
 import GridItem from './components/GridItem';
 interface Props {}
-const GridSkia: React.FC<Props> = () => {
+const AppleWatchGridSkia: React.FC<Props> = () => {
   // Animated Values
   const touchedPoint = useValue<{x: number; y: number} | null>(null);
+  const touchOrigin = useValue<{x: number; y: number} | null>(null);
 
   /**
    * we're going to use this value to smooth the scale animation by
@@ -36,14 +38,20 @@ const GridSkia: React.FC<Props> = () => {
   const onCanvasTouch = useTouchHandler({
     onStart: event => {
       runTiming(progress, 1, {duration: 300});
-      touchedPoint.current = {x: event.x, y: event.y};
+      //touchedPoint.current = {x: event.x, y: event.y};
+      touchOrigin.current = {x: event.x, y: event.y};
     },
     onActive: event => {
-      touchedPoint.current = {x: event.x, y: event.y};
+      if (touchOrigin !== null && touchOrigin.current !== null) {
+        touchedPoint.current = {
+          x: event.x - touchOrigin.current.x,
+          y: event.y - touchOrigin.current.y,
+        };
+      }
     },
     onEnd: () => {
-      runTiming(progress, 0, {duration: 300});
-      touchedPoint.current = null;
+      touchOrigin.current = touchedPoint.current;
+      //touchedPoint.current = null;
     },
   });
 
@@ -56,15 +64,11 @@ const GridSkia: React.FC<Props> = () => {
               return (
                 <GridItem
                   rectProps={{
-                    x:
-                      horizontalIndex * ITEM_CONTAINER_SIZE +
-                      ITEM_CONTAINER_PADDING / 2,
-                    y:
-                      verticalIndex * ITEM_CONTAINER_SIZE +
-                      ITEM_CONTAINER_PADDING / 2,
+                    x: horizontalIndex * ITEM_CONTAINER_SIZE,
+                    y: verticalIndex * ITEM_CONTAINER_SIZE,
                     height: ITEM_SIZE,
                     width: ITEM_SIZE,
-                    r: 4,
+                    r: ITEM_CONTAINER_SIZE / 2,
                   }}
                   key={`${horizontalIndex}-${verticalIndex}`}
                   point={touchedPoint}
@@ -78,10 +82,18 @@ const GridSkia: React.FC<Props> = () => {
             end={vec(CARD_WIDTH / 2, CANVAS_HEIGHT / 2)}
             colors={['cyan', 'magenta', 'cyan', 'magenta']}
           />
+          <RoundedRect
+            x={CANVAS_WIDTH / 2 - 8}
+            y={CANVAS_HEIGHT / 2 - 8}
+            width={16}
+            height={16}
+            r={25}
+            color="red"
+          />
         </Group>
       </Canvas>
     </View>
   );
 };
 
-export default GridSkia;
+export default AppleWatchGridSkia;

@@ -20,6 +20,7 @@ import ColorInterpolationBasic from '../color-interpolation/ColoInterpolation';
 import SkiaHoloCards from '../skia-holo-cards/SkiaHoloCards';
 import PanGestureSkiaBasics from '../PanGestureSkiaBasics/PanGestureSkiaBasics';
 import GridSkia from '../grid-skia/GridSkia';
+import AppleWatchGridSkia from '../apple-watch-grid-skia/AppleWatchGridSkia';
 
 const Drawer = createDrawerNavigator();
 
@@ -51,6 +52,16 @@ const App = () => {
             }}
           />
           <Drawer.Screen
+            name="AppleWatchGridSkia"
+            component={AppleWatchGridSkia}
+            options={{
+              headerStyle: {
+                backgroundColor: 'transparent',
+              },
+              headerShown: false,
+            }}
+          />
+          <Drawer.Screen
             name="PanGestureSkiaBasics"
             component={PanGestureSkiaBasics}
             options={{
@@ -60,7 +71,6 @@ const App = () => {
               headerShown: false,
             }}
           />
-
           <Drawer.Screen
             name="InterpolateScrollView"
             component={InterpolateScrollView}
