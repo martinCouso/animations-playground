@@ -15,6 +15,7 @@
 		5D38A62FFC085E422A70E7C2 /* libPods-AnimationsPlayground-AnimationsPlaygroundTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 222B805038EE27DF716A20CE /* libPods-AnimationsPlayground-AnimationsPlaygroundTests.a */; };
 		7A1D8DE7560664720F316A0B /* libPods-AnimationsPlayground.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0AC1BC9BAC807319D72E014 /* libPods-AnimationsPlayground.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		8920BB31E88540E99CD1A570 /* matrix-code-nfi.otf in Resources */ = {isa = PBXBuildFile; fileRef = 81586DB8FDA04AC289E4DA2A /* matrix-code-nfi.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		886E5AB59F0749E3A67F867C /* FutureSpace.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = FutureSpace.ttf; path = ../src/assets/fonts/FutureSpace.ttf; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F0AC1BC9BAC807319D72E014 /* libPods-AnimationsPlayground.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnimationsPlayground.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81586DB8FDA04AC289E4DA2A /* matrix-code-nfi.otf */ = {isa = PBXFileReference; name = "matrix-code-nfi.otf"; path = "../src/assets/fonts/matrix-code-nfi.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				886E5AB59F0749E3A67F867C /* FutureSpace.ttf */,
+				81586DB8FDA04AC289E4DA2A /* matrix-code-nfi.otf */,
 			);
 			name = Resources;
 			path = "";
@@ -257,6 +260,7 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				1258A487AC5C4D87A6585A37 /* FutureSpace.ttf in Resources */,
+				8920BB31E88540E99CD1A570 /* matrix-code-nfi.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

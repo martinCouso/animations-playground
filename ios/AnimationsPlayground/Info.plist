@@ -54,6 +54,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>FutureSpace.ttf</string>
+		<string>matrix-code-nfi.otf</string>
 	</array>
 </dict>
 </plist>
