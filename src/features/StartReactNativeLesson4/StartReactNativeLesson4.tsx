@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Image} from 'react-native';
+import {View, Text} from 'react-native';
 import {PanGestureHandler} from 'react-native-gesture-handler';
 import Animated, {
   useAnimatedGestureHandler,
@@ -10,6 +10,10 @@ import Animated, {
 import Styles, {BOUND_X, BOUND_Y} from './styles/StarReactNAtiveLesson4Styles';
 import {clamp, withBouncing} from 'react-native-redash';
 import {GestureContext} from './types';
+import Card from '../../shared-components/card/Card';
+import {CANVAS_WIDTH} from '../../Styles';
+import {CARD_WIDTH} from '../../shared-components/card/CardStyles';
+import {GUIDE_TEXT} from './constants';
 interface Props {}
 
 /**
@@ -30,8 +34,8 @@ const StartReactNativeLesson4: React.FC<Props> = () => {
    * Step 1. These values are called "Shared Values" because they are shared
    * between the UI Thread and the JS Thread
    */
-  const translateX = useSharedValue(0);
-  const translateY = useSharedValue(0);
+  const translateX = useSharedValue(CANVAS_WIDTH / 2 - CARD_WIDTH / 2);
+  const translateY = useSharedValue(400);
 
   /**
    * Step 2. The gesture handler expects an object where each key represents the
@@ -90,15 +94,10 @@ const StartReactNativeLesson4: React.FC<Props> = () => {
 
   return (
     <View style={Styles.container}>
+      <Text style={Styles.guideText}>{GUIDE_TEXT}</Text>
       <PanGestureHandler onGestureEvent={onGestureEventHandler}>
-        <Animated.View style={[Styles.card, animatedStyles]}>
-          <Text style={Styles.cardText}>CARD BRAND</Text>
-          <Image
-            style={Styles.chip}
-            source={require('../../assets/images/card-chip-bw.png')}
-          />
-          <Text style={Styles.cardText}>1234 5678 9123 4567</Text>
-          <Text style={Styles.cardNameText}>MARTIN COUSO</Text>
+        <Animated.View style={[animatedStyles]}>
+          <Card />
         </Animated.View>
       </PanGestureHandler>
     </View>
