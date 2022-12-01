@@ -11,4 +11,7 @@
 # <H3>PAN GESTURE - SHARING VALUE WITH SKIA BASICS - CARD</H3>
 ![](https://github.com/martinCouso/animations-playground/blob/main/src/assets/gif-demos/pan-gesture-skia-basics-card.gif)
 
+# <H3>REACT STATE AND CONTEXT TO CONTROL ANIMATIONS</H3>
+![](https://github.com/martinCouso/animations-playground/blob/main/src/assets/gif-demos/lesson-5-state-animation-context-theme.gif)
+
 

@@ -11,6 +11,7 @@ import SkiaHoloCards from '../features/skia-holo-cards/SkiaHoloCards';
 import React from 'react';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import {DARK_HEADER, NO_HEADER} from './styles/NavigationStyles';
+import StartReactNativeLesson5 from '../features/StartReactNativeLesson5/StartReactNativeLesson5';
 
 const Drawer = createDrawerNavigator();
 
@@ -31,6 +32,12 @@ export const DrawerNavigator = () => (
     <Drawer.Screen
       name="StartReactNativeLesson4"
       component={StartReactNativeLesson4}
+      options={NO_HEADER}
+    />
+
+    <Drawer.Screen
+      name="StartReactNativeLesson5"
+      component={StartReactNativeLesson5}
       options={NO_HEADER}
     />
     <Drawer.Screen name="GridSkia" component={GridSkia} options={NO_HEADER} />

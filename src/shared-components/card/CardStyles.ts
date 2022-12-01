@@ -9,7 +9,7 @@ export const BOUND_Y = height - CARD_HEIGHT;
 export const CARD_COLORS = [
   ['cyan', 'magenta'],
   ['violet', 'orange'],
-  ['blue', 'green'],
+  ['magenta', 'orange'],
   ['orange', 'violet'],
   ['magenta', 'violet'],
 ];
